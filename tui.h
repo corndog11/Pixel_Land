@@ -1,5 +1,6 @@
 #ifndef TUI_H
 #define TUI_H
+#include "image.h"
 #include "account.h"
 #include "database.h"
 #include <iostream>
@@ -20,6 +21,7 @@ private:
   void create();
   bool paswdcheck(std::string str);
   bool usercheck(std::string str);
+  img::image image;
   std::string input;
   data::database users;
 };

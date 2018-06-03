@@ -18,7 +18,7 @@ void database::adduser(std::string username, std::string password, std::string l
 int database::init(){
   connect();
   mysql_query(con, "USE users");
-  mysql_query(con, "CREATE TABLE IF NOT EXISTS users(paswd TEXT, username TEXT, land TEXT)");
+  mysql_query(con, "CREATE TABLE IF NOT EXISTS users(paswd TEXT, username TEXT, land MEDIUMBLOB)");
 
   mysql_close(con);
   return 0;

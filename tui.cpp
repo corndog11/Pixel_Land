@@ -7,7 +7,7 @@ tui::tui(){
 
 int tui::menu(){
   users.init();
-  std::cout << "--------------------\n::ASCII UNIVERSE::" <<  "\n1)login\n2)create account" << std::endl;
+  std::cout << "--------------------\n::ASCII UNIVERSE::" <<  "\n1)login\n2)create account\n3)view" << std::endl;
   std::cin >> input;
   if(process() == 1){
     return 1;
@@ -20,6 +20,11 @@ int tui::process(){
   }
   if (input == "2"){
     create();
+  }
+  if (input == "3"){
+    std::string name;
+    std::cin >> name;
+    image.loadimage(200, 200, users.getland(name));
   }
   if (input == "q"){
     return 1;
